@@ -1,0 +1,19 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "../loginmaster/src/App";
+import reportWebVitals from "../loginmaster/src/reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { AuthContextProvider } from "./src/components/pages/auth/authcontext";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <AuthContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AuthContextProvider>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
